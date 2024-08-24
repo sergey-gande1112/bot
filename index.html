@@ -13,6 +13,7 @@
             background-color: #f8f9fa;
             color: #343a40;
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* Стили для заголовка */
@@ -74,10 +75,13 @@
             border-radius: 12px;
             margin: 20px auto;
             max-width: 1200px;
+            position: relative;
+            overflow: hidden;
         }
 
         .main-content {
             max-width: 700px;
+            position: relative;
         }
 
         .main-content h1 {
@@ -85,12 +89,14 @@
             margin-bottom: 20px;
             line-height: 1.2;
             color: #ffffff;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .main-content p {
             font-size: 20px;
             margin-bottom: 30px;
             color: #e9ecef;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .cta-button {
@@ -105,6 +111,7 @@
             transition: background-color 0.3s, transform 0.3s;
             text-decoration: none;
             display: inline-block;
+            animation: fadeIn 2s ease-in-out;
         }
 
         .cta-button:hover {
@@ -127,6 +134,7 @@
             font-size: 36px;
             margin-bottom: 40px;
             color: #343a40;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .features-grid {
@@ -144,6 +152,7 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
             transition: background-color 0.3s, transform 0.3s;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .feature-item:hover {
@@ -155,90 +164,6 @@
             font-size: 22px;
             color: #343a40;
             margin: 0;
-        }
-
-        /* Секция Отзывы */
-        .reviews-section {
-            padding: 60px 5%;
-            background-color: #f8f9fa;
-            text-align: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 12px;
-            margin: 20px auto;
-            max-width: 1200px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .reviews-section h2 {
-            font-size: 36px;
-            margin-bottom: 40px;
-            color: #343a40;
-        }
-
-        .reviews-slider {
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            margin-bottom: 20px;
-            justify-content: center;
-        }
-
-        .reviews-slider .review {
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin: 0 10px;
-            min-width: 300px;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .reviews-slider .review:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-        }
-
-        .review-name {
-            font-size: 18px;
-            font-weight: 500;
-            color: #007bff;
-        }
-
-        .review-text {
-            font-size: 16px;
-            color: #343a40;
-            margin-top: 10px;
-        }
-
-        .telegram-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #007bff;
-            color: #ffffff;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-size: 18px;
-            font-weight: 500;
-            text-transform: uppercase;
-            transition: background-color 0.3s, transform 0.3s;
-            text-decoration: none;
-            cursor: pointer;
-            margin-top: 20px;
-        }
-
-        .telegram-button:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
-        }
-
-        .telegram-button img {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
         }
 
         /* Секция FAQ */
@@ -256,6 +181,7 @@
             font-size: 36px;
             margin-bottom: 30px;
             color: #343a40;
+            animation: fadeIn 1s ease-in-out;
         }
 
         .faq-item {
@@ -268,6 +194,7 @@
             max-width: 800px;
             margin-left: auto;
             margin-right: auto;
+            animation: fadeIn 1.5s ease-in-out;
         }
 
         .faq-item h3 {
@@ -308,6 +235,18 @@
             color: #0056b3;
         }
 
+        /* Анимации */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         /* Адаптивные стили */
         @media (max-width: 768px) {
             .header {
@@ -341,16 +280,6 @@
 
             .feature-item {
                 flex: 1 1 100%;
-                margin-bottom: 20px;
-            }
-
-            .reviews-slider {
-                flex-direction: column;
-                overflow: visible;
-            }
-
-            .reviews-slider .review {
-                min-width: 100%;
                 margin-bottom: 20px;
             }
         }
@@ -398,29 +327,6 @@
         </div>
     </section>
 
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <h2>Отзывы клиентов</h2>
-        <div class="reviews-slider">
-            <div class="review">
-                <div class="review-name">Сергей Павлов</div>
-                <div class="review-text">"Офигеть, все пришло, магазин бомба!"</div>
-            </div>
-            <div class="review">
-                <div class="review-name">Семен Долматов</div>
-                <div class="review-text">"Все понял, как вы работаете. Буду рекомендовать!"</div>
-            </div>
-            <div class="review">
-                <div class="review-name">Михаил</div>
-                <div class="review-text">"Покупал баланс на Теле2. Всё пришло быстро и админ топ, всё сделал в лучшем виде. Буду брать ещё."</div>
-            </div>
-        </div>
-        <a href="https://t.me/SkyRepChanel" class="telegram-button">
-            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Icon">
-            Посмотреть в Telegram
-        </a>
-    </section>
-
     <!-- FAQ Section -->
     <section class="faq-section">
         <h2>Часто задаваемые вопросы</h2>
@@ -442,28 +348,5 @@
     <footer class="footer">
         <p>&copy; 2024 Sky Shop. Все права защищены. <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
     </footer>
-
-    <script>
-        const slider = document.querySelector('.reviews-slider');
-        let currentIndex = 0;
-        const reviews = document.querySelectorAll('.reviews-slider .review');
-
-        function showSlide(index) {
-            const totalSlides = reviews.length;
-            currentIndex = (index + totalSlides) % totalSlides;
-            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
-        }
-
-        function nextSlide() {
-            showSlide(currentIndex + 1);
-        }
-
-        function prevSlide() {
-            showSlide(currentIndex - 1);
-        }
-
-        // Add functionality to automatically scroll slides
-        setInterval(nextSlide, 5000);
-    </script>
 </body>
 </html>
