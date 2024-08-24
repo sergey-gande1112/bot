@@ -3,39 +3,234 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Партнерская программа</title>
+    <title>Sky Shop</title>
     <style>
-        /* Стили для улучшения визуала */
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .header {
+            background-color: #ffffff;
+            padding: 20px 10%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navigation ul {
+            list-style-type: none;
             margin: 0;
             padding: 0;
+            display: flex;
+            gap: 20px;
         }
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 20px;
+
+        .navigation ul li a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
         }
-        h1 {
+
+        .navigation ul li a:hover {
+            color: #ff4b5c;
+        }
+
+        .main-section {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 80px 5%;
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+        }
+
+        .main-content {
+            max-width: 600px;
+        }
+
+        .main-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
             color: #333;
         }
-        p {
-            color: #666;
+
+        .main-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #555;
         }
-        /* Дополнительные стили по вашему усмотрению */
+
+        .cta-button {
+            background-color: #ff4b5c;
+            color: #ffffff;
+            border: none;
+            padding: 15px 30px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 25px;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .cta-button:hover {
+            background-color: #e04352;
+        }
+
+        .features-section {
+            padding: 60px 10%;
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-top: 1px solid #e0e0e0;
+            margin-bottom: 20px;
+        }
+
+        .features-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #333;
+        }
+
+        .features-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .feature-item {
+            flex: 1 1 calc(25% - 20px);
+            background-color: #f9f9f9;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .feature-item:hover {
+            background-color: #ffffff;
+            transform: translateY(-10px);
+        }
+
+        .feature-item h3 {
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+        }
+
+        .faq-section {
+            padding: 60px 10%;
+            background-color: #ffffff;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .faq-section h2 {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        .faq-item {
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: left;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            margin: 0;
+            font-weight: 700;
+            color: #333;
+        }
+
+        .faq-item a {
+            color: #ff4b5c;
+            text-decoration: none;
+            font-weight: 500;
+            display: block;
+            margin-top: 10px;
+            transition: color 0.3s;
+        }
+
+        .faq-item a:hover {
+            color: #e04352;
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Добро пожаловать в нашу партнерскую программу!</h1>
-        <p>Здесь вы найдете промокоды и специальные предложения от наших партнеров.</p>
-        <!-- Добавьте дополнительный контент, ссылки и баннеры -->
-        <script src="https://dash.perfluence.net/blogger/promocode-api/widget-script?version=1.0&key=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6NTc1MzgwLCJhdXRoX2tleSI6InVoaVJBemZDX3FXcVdhQzRpdm1JUXA2UkVzR1lrY2RCIiwiZGF0YSI6eyJ3aWRnZXRfaWQiOjMxNTR9fQ.wHqxWpF9q33qt12prDFEhbS7BkP-e13f7wwPkiK6BGs" type="text/javascript"></script>
-        <div id="promocode-widget-3154" style="width: 100%"></div>
-        <script type="text/javascript">
-            PromoCodeWidget.widget("promocode-widget-3154");
-        </script>
-    </div>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navigation">
+            <ul>
+                <li><a href="https://sergey-gande1112.github.io/inst/">Инструкции</a></li>
+                <li><a href="https://t.me/SkyRepChanel">Отзывы</a></li>
+                <li><a href="https://t.me/Poderzhkas">Поддержка</a></li>
+                <li><a href="https://sergey-gande1112.github.io/promo/">Промокоды</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Section -->
+    <section class="main-section">
+        <div class="main-content">
+            <h1>Магазин цифровых товаров</h1>
+            <p>Быстро и выгодно. Нажмите на кнопку ниже, чтобы узнать подробнее</p>
+            <a href="https://t.me/SkyRuShop_Bot" class="cta-button">Бот</a>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section">
+        <h2>Sky Shop – это</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <h3>Только качественные товары</h3>
+            </div>
+            <div class="feature-item">
+                <h3>Квалифицированная поддержка</h3>
+            </div>
+            <div class="feature-item">
+                <h3>Наилучшее соотношение цены</h3>
+            </div>
+            <div class="feature-item">
+                <h3>Приятный в использовании сервис</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2>Часто задаваемые вопросы</h2>
+        <div class="faq-item">
+            <h3>Как пополнить баланс в боте и сделать покупку.</h3>
+            <a href="https://teletype.in/@oneinskyr/vlUKKAVRIwO">Читать инструкцию</a>
+        </div>
+        <div class="faq-item">
+            <h3>Как пригласить друга и получать % с его покупок.</h3>
+            <a href="https://telegra.ph/Referalnaya-sistema-02-29">Читать инструкцию</a>
+        </div>
+        <div class="faq-item">
+            <h3>SMS-сервисы и как ими пользоваться</h3>
+            <a href="https://teletype.in/@oneinskyr/XpJXTMvLmVQ">Читать инструкцию</a>
+        </div>
+    </section>
 </body>
 </html>
