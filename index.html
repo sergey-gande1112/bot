@@ -4,23 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sky Shop</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
     <style>
+        /* Основные стили */
         body {
             margin: 0;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #343a40;
             line-height: 1.6;
         }
 
+        /* Стили для заголовка */
         .header {
-            background-color: #ffffff;
-            padding: 15px 5%;
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 5%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: 1px solid #6c757d;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
         }
 
         .navigation {
@@ -38,23 +48,28 @@
         }
 
         .navigation ul li a {
-            color: #333;
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s, transform 0.3s;
+            padding: 8px 12px;
+            border-radius: 4px;
+            transition: color 0.3s, background-color 0.3s, transform 0.3s;
         }
 
         .navigation ul li a:hover {
-            color: #ff4b5c;
+            color: #f8f9fa;
+            background-color: #495057;
             transform: translateY(-2px);
         }
 
+        /* Основной секция */
         .main-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 40px 5%;
-            background-color: #ffffff;
+            padding: 80px 5%;
+            background: linear-gradient(135deg, #007bff, #6610f2);
+            color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             border-radius: 12px;
@@ -63,23 +78,24 @@
         }
 
         .main-content {
-            max-width: 600px;
+            max-width: 700px;
         }
 
         .main-content h1 {
-            font-size: 36px;
+            font-size: 48px;
             margin-bottom: 20px;
-            color: #333;
+            line-height: 1.2;
+            color: #ffffff;
         }
 
         .main-content p {
-            font-size: 18px;
-            margin-bottom: 20px;
-            color: #555;
+            font-size: 20px;
+            margin-bottom: 30px;
+            color: #e9ecef;
         }
 
         .cta-button {
-            background-color: #ff4b5c;
+            background-color: #28a745;
             color: #ffffff;
             border: none;
             padding: 15px 30px;
@@ -93,12 +109,13 @@
         }
 
         .cta-button:hover {
-            background-color: #e04352;
+            background-color: #218838;
             transform: scale(1.05);
         }
 
+        /* Секция Функций */
         .features-section {
-            padding: 40px 5%;
+            padding: 60px 5%;
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -109,8 +126,8 @@
 
         .features-section h2 {
             font-size: 36px;
-            margin-bottom: 30px;
-            color: #333;
+            margin-bottom: 40px;
+            color: #343a40;
         }
 
         .features-grid {
@@ -121,9 +138,9 @@
         }
 
         .feature-item {
-            flex: 1 1 calc(50% - 20px);
-            background-color: #f9f9f9;
-            padding: 20px;
+            flex: 1 1 calc(33% - 20px);
+            background-color: #f8f9fa;
+            padding: 30px;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -136,13 +153,120 @@
         }
 
         .feature-item h3 {
-            font-size: 18px;
-            color: #333;
+            font-size: 22px;
+            color: #343a40;
             margin: 0;
         }
 
+        /* Секция Отзывы */
+        .reviews-section {
+            padding: 60px 5%;
+            background-color: #f8f9fa;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        .reviews-section h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+            color: #343a40;
+        }
+
+        .reviews-slider {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+            margin-bottom: 20px;
+        }
+
+        .reviews-slider .review {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 0 10px;
+            min-width: 300px;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .reviews-slider .review:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .review-name {
+            font-size: 18px;
+            font-weight: 500;
+            color: #007bff;
+        }
+
+        .review-text {
+            font-size: 16px;
+            color: #343a40;
+            margin-top: 10px;
+        }
+
+        .review-controls {
+            display: flex;
+            justify-content: space-between;
+            position: absolute;
+            width: 100%;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 0 20px;
+            box-sizing: border-box;
+        }
+
+        .review-controls button {
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: #007bff;
+            cursor: pointer;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .review-controls button:hover {
+            color: #0056b3;
+            transform: scale(1.1);
+        }
+
+        .telegram-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #007bff;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 18px;
+            font-weight: 500;
+            text-transform: uppercase;
+            transition: background-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .telegram-button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .telegram-button img {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+        }
+
+        /* Секция FAQ */
         .faq-section {
-            padding: 40px 5%;
+            padding: 60px 5%;
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -154,14 +278,14 @@
         .faq-section h2 {
             font-size: 36px;
             margin-bottom: 30px;
-            color: #333;
+            color: #343a40;
         }
 
         .faq-item {
-            background-color: #f9f9f9;
+            background-color: #f8f9fa;
             border-radius: 8px;
-            padding: 15px;
-            margin-bottom: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: left;
             max-width: 800px;
@@ -170,14 +294,14 @@
         }
 
         .faq-item h3 {
-            font-size: 18px;
+            font-size: 20px;
             margin: 0;
             font-weight: 700;
-            color: #333;
+            color: #343a40;
         }
 
         .faq-item a {
-            color: #ff4b5c;
+            color: #007bff;
             text-decoration: none;
             font-weight: 500;
             display: block;
@@ -186,55 +310,68 @@
         }
 
         .faq-item a:hover {
-            color: #e04352;
+            color: #0056b3;
         }
 
+        /* Секция Футер */
+        .footer {
+            background-color: #343a40;
+            color: #ffffff;
+            padding: 20px 5%;
+            text-align: center;
+            border-top: 1px solid #6c757d;
+            position: relative;
+        }
+
+        .footer a {
+            color: #007bff;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            color: #0056b3;
+        }
+
+        /* Адаптивные стили */
         @media (max-width: 768px) {
+            .header {
+                padding: 20px 10px;
+            }
+
             .navigation ul {
                 flex-direction: column;
                 gap: 10px;
-                align-items: center;
             }
 
             .main-content h1 {
-                font-size: 32px;
+                font-size: 36px;
             }
 
             .main-content p {
-                font-size: 16px;
+                font-size: 18px;
             }
 
             .cta-button {
-                padding: 12px 25px;
                 font-size: 16px;
+                padding: 12px 24px;
             }
 
             .features-grid {
                 flex-direction: column;
-                gap: 20px;
             }
 
             .feature-item {
                 flex: 1 1 100%;
+                margin-bottom: 20px;
             }
 
-            .faq-item {
-                padding: 10px;
+            .reviews-slider {
+                flex-direction: column;
             }
 
-            .faq-item h3 {
-                font-size: 16px;
-            }
-        }
-
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
+            .reviews-slider .review {
+                min-width: 100%;
+                margin-bottom: 20px;
             }
         }
     </style>
@@ -242,6 +379,7 @@
 <body>
     <!-- Header Section -->
     <header class="header">
+        <div class="logo">Sky Shop</div>
         <nav class="navigation">
             <ul>
                 <li><a href="https://sergey-gande1112.github.io/inst/">Инструкции</a></li>
@@ -280,6 +418,33 @@
         </div>
     </section>
 
+    <!-- Reviews Section -->
+    <section class="reviews-section">
+        <h2>Отзывы клиентов</h2>
+        <div class="reviews-slider">
+            <div class="review">
+                <div class="review-name">Сергей Павлов</div>
+                <div class="review-text">"Офигеть, все пришло, магазин бомба!"</div>
+            </div>
+            <div class="review">
+                <div class="review-name">Семен Долматов</div>
+                <div class="review-text">"Все понял, как вы работаете. Буду рекомендовать!"</div>
+            </div>
+            <div class="review">
+                <div class="review-name">Михаил</div>
+                <div class="review-text">"Покупал баланс на Теле2. Всё пришло быстро и админ топ, всё сделал в лучшем виде. Буду брать ещё."</div>
+            </div>
+        </div>
+        <div class="review-controls">
+            <button onclick="prevSlide()">❮</button>
+            <button onclick="nextSlide()">❯</button>
+        </div>
+        <a href="https://t.me/SkyRepChanel" class="telegram-button">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Icon">
+            Посмотреть в Telegram
+        </a>
+    </section>
+
     <!-- FAQ Section -->
     <section class="faq-section">
         <h2>Часто задаваемые вопросы</h2>
@@ -296,5 +461,30 @@
             <a href="https://teletype.in/@oneinskyr/XpJXTMvLmVQ">Читать инструкцию</a>
         </div>
     </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2024 Sky Shop. Все права защищены. <a href="#">Политика конфиденциальности</a> | <a href="#">Условия использования</a></p>
+    </footer>
+
+    <script>
+        const slider = document.querySelector('.reviews-slider');
+        let currentIndex = 0;
+        const reviews = document.querySelectorAll('.reviews-slider .review');
+
+        function showSlide(index) {
+            const totalSlides = reviews.length;
+            currentIndex = (index + totalSlides) % totalSlides;
+            slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
+
+        function nextSlide() {
+            showSlide(currentIndex + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentIndex - 1);
+        }
+    </script>
 </body>
 </html>
