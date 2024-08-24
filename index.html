@@ -15,11 +15,17 @@
 
         .header {
             background-color: #ffffff;
-            padding: 20px 10%;
+            padding: 15px 5%;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .navigation {
+            width: 100%;
+            max-width: 1200px;
         }
 
         .navigation ul {
@@ -27,6 +33,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            justify-content: center;
             gap: 20px;
         }
 
@@ -34,22 +41,25 @@
             color: #333;
             text-decoration: none;
             font-weight: 500;
-            transition: color 0.3s;
+            transition: color 0.3s, transform 0.3s;
         }
 
         .navigation ul li a:hover {
             color: #ff4b5c;
+            transform: translateY(-2px);
         }
 
         .main-section {
             display: flex;
             flex-direction: column;
             align-items: center;
-            padding: 80px 5%;
+            padding: 40px 5%;
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
         .main-content {
@@ -57,14 +67,14 @@
         }
 
         .main-content h1 {
-            font-size: 48px;
+            font-size: 36px;
             margin-bottom: 20px;
             color: #333;
         }
 
         .main-content p {
-            font-size: 20px;
-            margin-bottom: 30px;
+            font-size: 18px;
+            margin-bottom: 20px;
             color: #555;
         }
 
@@ -77,27 +87,29 @@
             font-size: 18px;
             border-radius: 25px;
             text-transform: uppercase;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.3s;
             text-decoration: none;
             display: inline-block;
         }
 
         .cta-button:hover {
             background-color: #e04352;
+            transform: scale(1.05);
         }
 
         .features-section {
-            padding: 60px 10%;
+            padding: 40px 5%;
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-top: 1px solid #e0e0e0;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
         .features-section h2 {
             font-size: 36px;
-            margin-bottom: 40px;
+            margin-bottom: 30px;
             color: #333;
         }
 
@@ -109,9 +121,9 @@
         }
 
         .feature-item {
-            flex: 1 1 calc(25% - 20px);
+            flex: 1 1 calc(50% - 20px);
             background-color: #f9f9f9;
-            padding: 30px;
+            padding: 20px;
             border-radius: 12px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
             text-align: center;
@@ -124,16 +136,19 @@
         }
 
         .feature-item h3 {
-            font-size: 20px;
+            font-size: 18px;
             color: #333;
             margin: 0;
         }
 
         .faq-section {
-            padding: 60px 10%;
+            padding: 40px 5%;
             background-color: #ffffff;
             text-align: center;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            margin: 20px auto;
+            max-width: 1200px;
         }
 
         .faq-section h2 {
@@ -145,8 +160,8 @@
         .faq-item {
             background-color: #f9f9f9;
             border-radius: 8px;
-            padding: 20px;
-            margin-bottom: 20px;
+            padding: 15px;
+            margin-bottom: 15px;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
             text-align: left;
             max-width: 800px;
@@ -155,7 +170,7 @@
         }
 
         .faq-item h3 {
-            font-size: 20px;
+            font-size: 18px;
             margin: 0;
             font-weight: 700;
             color: #333;
@@ -172,6 +187,55 @@
 
         .faq-item a:hover {
             color: #e04352;
+        }
+
+        @media (max-width: 768px) {
+            .navigation ul {
+                flex-direction: column;
+                gap: 10px;
+                align-items: center;
+            }
+
+            .main-content h1 {
+                font-size: 32px;
+            }
+
+            .main-content p {
+                font-size: 16px;
+            }
+
+            .cta-button {
+                padding: 12px 25px;
+                font-size: 16px;
+            }
+
+            .features-grid {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .feature-item {
+                flex: 1 1 100%;
+            }
+
+            .faq-item {
+                padding: 10px;
+            }
+
+            .faq-item h3 {
+                font-size: 16px;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
