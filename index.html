@@ -25,7 +25,6 @@
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid #6c757d;
-            position: relative;
         }
 
         .logo {
@@ -179,7 +178,6 @@
             display: flex;
             overflow: hidden;
             position: relative;
-            transition: transform 0.5s ease-in-out;
             margin-bottom: 20px;
         }
 
@@ -211,31 +209,6 @@
             margin-top: 10px;
         }
 
-        .review-controls {
-            display: flex;
-            justify-content: space-between;
-            position: absolute;
-            width: 100%;
-            top: 50%;
-            transform: translateY(-50%);
-            padding: 0 20px;
-            box-sizing: border-box;
-        }
-
-        .review-controls button {
-            background: none;
-            border: none;
-            font-size: 24px;
-            color: #007bff;
-            cursor: pointer;
-            transition: color 0.3s, transform 0.3s;
-        }
-
-        .review-controls button:hover {
-            color: #0056b3;
-            transform: scale(1.1);
-        }
-
         .telegram-button {
             display: flex;
             align-items: center;
@@ -251,6 +224,7 @@
             transition: background-color 0.3s, transform 0.3s;
             text-decoration: none;
             cursor: pointer;
+            margin-top: 20px;
         }
 
         .telegram-button:hover {
@@ -335,6 +309,8 @@
         /* Адаптивные стили */
         @media (max-width: 768px) {
             .header {
+                flex-direction: column;
+                align-items: center;
                 padding: 20px 10px;
             }
 
@@ -367,11 +343,16 @@
 
             .reviews-slider {
                 flex-direction: column;
+                overflow: visible;
             }
 
             .reviews-slider .review {
                 min-width: 100%;
                 margin-bottom: 20px;
+            }
+
+            .review-controls {
+                display: none;
             }
         }
     </style>
@@ -435,10 +416,6 @@
                 <div class="review-text">"Покупал баланс на Теле2. Всё пришло быстро и админ топ, всё сделал в лучшем виде. Буду брать ещё."</div>
             </div>
         </div>
-        <div class="review-controls">
-            <button onclick="prevSlide()">❮</button>
-            <button onclick="nextSlide()">❯</button>
-        </div>
         <a href="https://t.me/SkyRepChanel" class="telegram-button">
             <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Icon">
             Посмотреть в Telegram
@@ -485,6 +462,9 @@
         function prevSlide() {
             showSlide(currentIndex - 1);
         }
+
+        // Add functionality to automatically scroll slides
+        setInterval(nextSlide, 5000);
     </script>
 </body>
 </html>
